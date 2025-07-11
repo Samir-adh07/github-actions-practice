@@ -1,1 +1,11 @@
+name: Hello World Workflow   ##### this is the workflow name basically it helps you identify what this workflow does
 
+on: [push]   # Triggered when you push code to the repo  this is basicallly the event this means that anytime you push the code into this repo this workflow will run
+
+jobs:   ### a workflow consists of one or more jobs it is the set of steps that runs in the same environment
+  say-hello: ####this is basically the job id
+    runs-on: ubuntu-latest   # Use GitHub-hosted Ubuntu VM
+
+    steps:
+      - name: Print a greeting
+        run: echo "👋 Hello, Samir! Your first GitHub Action is running!"
